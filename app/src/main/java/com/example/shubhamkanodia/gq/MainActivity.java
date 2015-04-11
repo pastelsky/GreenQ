@@ -78,7 +78,7 @@ public class MainActivity extends Activity {
             map.getMyLocation();
             double lat = map.getMyLocation().getLatitude();
             Toast.makeText(MainActivity.this,
-                    "Current location"  + map.getMyLocation().getLatitude(),
+                    "Current location" + map.getMyLocation().getLatitude(),
                     Toast.LENGTH_SHORT).show();
         }
         return true;
