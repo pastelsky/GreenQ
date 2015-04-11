@@ -32,7 +32,8 @@ public class MainActivity extends Activity {
         actionButton.setImageResource(R.drawable.percent);
 
         actionButton.setButtonColor(getResources().getColor(R.color.fab_material_green_500));
-
+        this.getActionBar().hide();
+        
         GooglePlayServicesUtil
                 .isGooglePlayServicesAvailable(getApplicationContext());
         map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
