@@ -31,6 +31,8 @@ public class MainActivity extends Activity {
         ActionButton actionButton = (ActionButton) findViewById(R.id.action_button);
         actionButton.setImageResource(R.drawable.percent);
 
+        actionButton.setButtonColor(getResources().getColor(R.color.fab_material_green_500));
+
         GooglePlayServicesUtil
                 .isGooglePlayServicesAvailable(getApplicationContext());
         map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
