@@ -18,7 +18,7 @@ public class DisplayStats extends Activity {
         String[] myStrings = intent.getStringArrayExtra("strings");
 
         TextView text = (TextView) findViewById(R.id.text);
-        text.setText(myStrings[0] + myStrings[1]);
+
 
     }
 }

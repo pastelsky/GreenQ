@@ -16,6 +16,7 @@ import android.os.SystemClock;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
@@ -483,4 +484,19 @@ public class MainActivity extends Activity {
         super.onCreateOptionsMenu(menu);
         return true;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+//            case R.id.item1:
+//                Toast.makeText(getApplicationContext(), "Item 1 Selected", Toast.LENGTH_LONG).show();
+//                return true;
+            case R.id.social:
+                Intent a = new Intent(MainActivity.this, Social.class);
+                startActivity(a);
+
+        }
+        return true;
+    }
+
 }
