@@ -4,6 +4,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import org.eazegraph.lib.charts.ValueLineChart;
@@ -25,6 +26,9 @@ public class DisplayStats extends Activity {
         getActionBar().setElevation(0);
 
         getActionBar().setTitle("Results");
+        getActionBar().setHomeButtonEnabled(true);
+
+
 
         ValueLineChart mCubicValueLineChart = (ValueLineChart) findViewById(R.id.cubiclinechart);
 
@@ -58,6 +62,19 @@ public class DisplayStats extends Activity {
 
         mCubicValueLineChart.addSeries(so2);
         mCubicValueLineChart.startAnimation();
+
+        TextView gpercent = (TextView) findViewById(R.id.gpercent);
+        double finalpercent = Math.round(Float.parseFloat(myStrings[0]));
+        gpercent.setText(Double.toString(finalpercent));
+        System.out.println(myStrings[0]);
+
+        TextView trees = (TextView) findViewById(R.id.trees);
+        trees.setText(myStrings[1]);
+        System.out.println(myStrings[1]);
+
+
+        RatingBar rb = (RatingBar) findViewById(R.id.ratingBar);
+        rb.setRating(Integer.parseInt(myStrings[0])/20.0f);
 
     }
 }

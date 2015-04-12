@@ -104,8 +104,8 @@ public class MainActivity extends Activity implements GoogleMap.OnMarkerClickLis
 
         LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-        double longitude = 72.567;
-        double latitude = 12.345;
+        double latitude = 72.567;
+        double longitude = 12.345;
 
         if(location != null) {
              longitude = location.getLongitude();

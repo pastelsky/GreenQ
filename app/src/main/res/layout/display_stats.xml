@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
 android:orientation="horizontal"
         android:weightSum="2"
         android:id="@+id/herobar">
@@ -20,6 +20,10 @@ android:orientation="horizontal"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             >
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -28,15 +32,17 @@ android:orientation="horizontal"
                 android:layout_centerHorizontal="true"
                 android:textStyle="bold"
                 android:id="@+id/greenT"
+                android:layout_marginBottom="30dp"
                 android:textSize="14sp"/>
 
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/quotient"
+                android:layout_centerInParent="true"
                 android:paddingLeft="10dp"
+                android:layout_marginTop="15dp"
+
                 android:id="@+id/linearLayout">
 
             <TextView
@@ -46,6 +52,7 @@ android:orientation="horizontal"
                 android:fontFamily="sans-serif-condensed"
                 android:textStyle="bold"
                 android:textSize="64sp"
+                android:textScaleX="0.95"
                 android:id="@+id/gpercent"/>
 
             <TextView
@@ -58,6 +65,8 @@ android:orientation="horizontal"
                 android:textSize="30sp"
                 android:id="@+id/percentsymbol"/>
             </LinearLayout>
+
+</RelativeLayout>
 
 
 
@@ -78,10 +87,24 @@ android:orientation="horizontal"
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
                 android:orientation="vertical"
                 >
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Need to plant"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textSize="14sp"
+                    android:id="@+id/need"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -89,13 +112,17 @@ android:orientation="horizontal"
                     android:fontFamily="sans-serif-condensed"
                     android:textStyle="bold"
                     android:textSize="64sp"
+                    android:textScaleX="0.95"
                     android:id="@+id/trees"/>
             <ImageView
-                android:layout_width="35dp"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
                 android:src="@drawable/tree"/>
+          </LinearLayout>
+
 
                 </LinearLayout>
 
