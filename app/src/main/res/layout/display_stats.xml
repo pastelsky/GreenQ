@@ -2,12 +2,150 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:background="@drawable/back"
     android:layout_height="match_parent">
 
-    <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+android:orientation="horizontal"
+        android:weightSum="2"
+        android:id="@+id/herobar">
+
+
+        <RelativeLayout
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GREEN QUOTIENT"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:id="@+id/greenT"
+                android:textSize="14sp"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/quotient"
+                android:paddingLeft="10dp"
+                android:id="@+id/linearLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="64"
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"
+                android:textSize="64sp"
+                android:id="@+id/gpercent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:id="@+id/percentsymbol"/>
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="#33fffbfd" />
+
+        <RelativeLayout
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="16dp"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="300"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textStyle="bold"
+                    android:textSize="64sp"
+                    android:id="@+id/trees"/>
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+
+                android:src="@drawable/tree"/>
+
+                </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#33ffffff"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#33ffffff"
+        />
+
+    <org.eazegraph.lib.charts.ValueLineChart
+        android:layout_marginTop="16dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cubiclinechart"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/text" />
+        android:layout_height="200dp"
+        app:egUseCubic="true"
+        app:egUseOverlapFill="false"
+        app:egCurveSmoothness="0.4"
+        app:egIndicatorLineColor="#00ffffff"
+        app:egLegendHeight="30dp"
+        app:egAnimationTime="1000"
+        app:egLegendColor="#fff"
+        app:egLineStroke="2dp"
+        app:egShowValueIndicator = "false"
+        app:egShowStandardValue="true"/>
 
 
 </LinearLayout>
