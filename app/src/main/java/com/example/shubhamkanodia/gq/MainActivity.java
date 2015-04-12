@@ -56,11 +56,12 @@ import java.util.Locale;
 import mbanje.kurt.fabbutton.FabButton;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements GoogleMap.OnMarkerClickListener {
 
     HttpClient client;
     String URL = "https://greenquotient.herokuapp.com/process.php?";
     JSONObject json;
+    Marker chirag, shubham, pavan, sourabh;
 
     String number_of_trees_to_be_planted;
 
@@ -110,7 +111,7 @@ public class MainActivity extends Activity {
 
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
-
+//        setUpMap();
         a.add(latitude);
         a.add(longitude);
 
@@ -160,6 +161,38 @@ public class MainActivity extends Activity {
         });
 
     }
+
+
+    private void setUpMap() {
+        map.setOnMarkerClickListener(this);
+
+        chirag = map.addMarker(new MarkerOptions()
+                .position(new LatLng(12.9421, 77.5658))
+                .title("Chirag")
+                .snippet("This is my spot!")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher)));
+        chirag.showInfoWindow();
+
+        shubham = map.addMarker(new MarkerOptions()
+                .position(new LatLng(12.9338, 77.5345))
+                .title("Shubham")
+                .snippet("This is my spot!")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+        shubham.showInfoWindow();
+    }
+
+//    @Override
+//    public boolean onMarkerClick(final Marker marker) {
+//
+//        if (marker.equals(chirag)) {
+//            //handle click here
+//        }
+//
+//        if (marker.equals(shubham)) {
+//            //handle click here
+//        }
+//        return true;
+//    }
 
     private void startIndeterminateProgress() {
         indeterminate.showProgress(true);
@@ -452,6 +485,19 @@ public class MainActivity extends Activity {
                     "Current location" + map.getMyLocation().getLatitude(),
                     Toast.LENGTH_SHORT).show();
         }
+        if (marker.equals(chirag)) {
+            Toast.makeText(MainActivity.this,
+                    "Chirag here",
+                    Toast.LENGTH_SHORT).show();
+        }
+
+        if (marker.equals(shubham)) {
+            Toast.makeText(MainActivity.this,
+                    "Shubhams here",
+                    Toast.LENGTH_SHORT).show();
+        }
+
+
         return true;
     }
 
