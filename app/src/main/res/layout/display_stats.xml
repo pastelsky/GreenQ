@@ -120,6 +120,7 @@ android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ratingBar"
+            android:isIndicator="true"
             android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
