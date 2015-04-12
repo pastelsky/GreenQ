@@ -16,6 +16,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
+        android:name=".PepperTalkSample"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -61,6 +62,35 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ActivityPepper"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activityTalk
+            android:name=".Pepper"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activityTalk>
+
+        <provider
+            android:name="com.espreccino.peppertalk.io.TalkProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:enabled="true"
+            android:label="PepperTalk"
+            android:syncable="true"
+            tools:replace="android:authorities" />
 
     </application>
 

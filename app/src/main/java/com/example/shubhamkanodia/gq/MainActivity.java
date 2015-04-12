@@ -538,7 +538,7 @@ public class MainActivity extends Activity implements GoogleMap.OnMarkerClickLis
 //                Toast.makeText(getApplicationContext(), "Item 1 Selected", Toast.LENGTH_LONG).show();
 //                return true;
             case R.id.social:
-                Intent a = new Intent(MainActivity.this, Social.class);
+                Intent a = new Intent(MainActivity.this, ActivityPepper.class);
                 startActivity(a);
 
         }
