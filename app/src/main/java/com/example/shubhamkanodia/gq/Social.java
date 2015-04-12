@@ -24,6 +24,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.espreccino.peppertalk.PepperTalk;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -458,6 +459,13 @@ public class Social extends Activity implements GoogleMap.OnMarkerClickListener 
             Toast.makeText(Social.this,
                     "Shubhams here",
                     Toast.LENGTH_SHORT).show();
+
+//            PepperTalk.getInstance(Social.this)
+//                    .chatWithParticipant("shubhamsizzles@gmail.com")
+//                    .topicId("We need to work")
+//                    .topicTitle("Let ride!")
+//                    .start();
+
         }
 
 
